@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Quote } from './quote';
 
 @Component({
   selector: 'app-root',
@@ -6,9 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  quote:string[];
 
-  constructor() {
-    this.quote = ['The purpose of our lives is to be happy', 'You only live once, but if you do it right, once is enough', "Life is what happens when you're busy making other plans"]
-  }
 }

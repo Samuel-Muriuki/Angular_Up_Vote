@@ -9,10 +9,10 @@ import { Quote } from '../quote';
 export class QuoteComponent implements OnInit {
 
   quote:Quote[] = [
-    {author:"Edison", name: "Samm", quote: "I love myself"},
-    {author:"Edison", name: "Samm", quote: "I love myself"},
-    {author:"Edison", name: "Samm", quote: "I love myself"},
-    {author:"Edison", name: "Samm", quote: "I love myself"}
+    {author:"Edison", name: "Samm", quote: "I love myself", detail: "First Quote"},
+    {author:"Edison", name: "Samm", quote: "I love myself", detail: "Second Quote"},
+    {author:"Edison", name: "Samm", quote: "I love myself", detail: "Third Quote"},
+    {author:"Edison", name: "Samm", quote: "I love myself", detail: "Fourth Quote"}
   ]
 
 

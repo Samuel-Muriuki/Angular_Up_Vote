@@ -8,11 +8,11 @@ export class ArchiveDirective {
   constructor(private elem:ElementRef) {}
 
   @HostListener("click") onClicks() {
-    this.textDeco("line-through")
+    this.textDeco("None")
   }
 
   @HostListener("dbclick") onDoubleClicks() {
-    this.textDeco("None")
+    this.textDeco("line-through")
   }
   
   private textDeco(action: string) {

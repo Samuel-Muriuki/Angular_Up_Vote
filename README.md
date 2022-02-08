@@ -31,6 +31,8 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 The example application is a quote voting site. You can view a live demo over at https://samuel-muriuki.github.io/Angular_Up_Vote/
 
+[Go Back to the top](#Angular_Up_Vote)
+
 ## Licence
 
 MIT License
@@ -60,4 +62,4 @@ SOFTWARE.
 
 Slack Profile - [Samuel-Muriuki](https://app.slack.com/)
 
-[Go Back to the top](#Pizza-Kings-Web-Page)
+[Go Back to the top](#Angular_Up_Vote)

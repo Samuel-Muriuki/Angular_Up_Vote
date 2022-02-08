@@ -7,6 +7,7 @@ import { QuoteComponent } from './quote/quote.component';
 import { QuoteDetailComponent } from './quote-detail/quote-detail.component';
 import { ArchiveDirective } from './archive.directive';
 import { DateCountDownPipe } from './date-count-down.pipe';
+import { QuoteFormComponent } from './quote-form/quote-form.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { DateCountDownPipe } from './date-count-down.pipe';
     QuoteComponent,
     QuoteDetailComponent,
     ArchiveDirective,
-    DateCountDownPipe
+    DateCountDownPipe,
+    QuoteFormComponent
   ],
   imports: [
     BrowserModule,

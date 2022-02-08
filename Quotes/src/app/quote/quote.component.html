@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <h2>These are my Quotes</h2>
+    <h2 class="text-center">These are my Quotes</h2>
     <hr>
     <ul>
       <div class="row">
@@ -7,7 +7,7 @@
           <div *ngFor="let quote of quote; let i = index">
             <div>
               <h4>{{ quote.author }}, {{ quote.name }}, {{ quote.quote }}, elapsed since creation: {{ quote.countDown|date|lowercase }}</h4>             <button (click)="toggleDetails(i)">Toggle Details</button>
-             
+              <app-quote-detail *ngIf="quote.showDetail" [quote] = 'quote' (isComplete)="deleteQuote($event, i)" ></app-quote-detail>
             </div>
           </div>
         </div>

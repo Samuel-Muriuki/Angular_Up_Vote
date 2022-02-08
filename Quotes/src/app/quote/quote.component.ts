@@ -9,12 +9,16 @@ import { Quote } from '../quote';
 export class QuoteComponent implements OnInit {
 
   quote:Quote[] = [
-    {author:"Edison", name: "Samm", quote: "I love myself", detail: "First Quote"},
-    {author:"Edison", name: "Samm", quote: "I love myself", detail: "Second Quote"},
-    {author:"Edison", name: "Samm", quote: "I love myself", detail: "Third Quote"},
-    {author:"Edison", name: "Samm", quote: "I love myself", detail: "Fourth Quote"}
+    new Quote("Edison", "Samm", "I love myself", "First Quote"),
+    new Quote("Edison", "Samm", "I love myself", "Second Quote"),
+    new Quote("Edison", "Samm", "I love myself", "Third Quote"),
+    new Quote("Edison", "Samm", "I love myself", "Fourth Quote"),
   ]
 
+
+  toggleDetails(index: any) {
+    this.quote[index].showDetail = !this.quote[index].showDetail;
+  }
 
   constructor() { }
 

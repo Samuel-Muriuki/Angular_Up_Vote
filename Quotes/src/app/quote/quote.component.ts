@@ -9,10 +9,10 @@ import { Quote } from '../quote';
 export class QuoteComponent implements OnInit {
 
   quote:Quote[] = [
-    new Quote("Edison", "Samm", "I love myself", "First Quote"),
-    new Quote("Edison", "Samm", "I love myself", "Second Quote"),
-    new Quote("Edison", "Samm", "I love myself", "Third Quote"),
-    new Quote("Edison", "Samm", "I love myself", "Fourth Quote"),
+    new Quote("Edison", "Samm", "I love myself", "First Quote", new Date(2020, 3, 23)),
+    new Quote("Edison", "Samm", "I love myself", "Second Quote", new Date(390)),
+    new Quote("Edison", "Samm", "I love myself", "Third Quote", new Date(2010, 1, 3)),
+    new Quote("Edison", "Samm", "I love myself", "Fourth Quote", new Date(2000, 9, 3)),
   ]
 
 

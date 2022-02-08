@@ -3,8 +3,8 @@
     <hr>
     <ul>
       <div *ngFor="let quote of quote; let i = index">
-        <li>
-          {{ quote.author }}, {{ quote.name }}, {{ quote.quote }}
+        <li appArchive>
+          {{ quote.author }}, {{ quote.name }}, {{ quote.quote }}, elapsed since creation: {{ quote.countDown|date|lowercase }}
           <button (click)="toggleDetails(i)">Toggle Details</button>
           <app-quote-detail *ngIf="quote.showDetail" [quote] = 'quote' (isComplete)="completeQuote($event, i)" ></app-quote-detail>
         </li>

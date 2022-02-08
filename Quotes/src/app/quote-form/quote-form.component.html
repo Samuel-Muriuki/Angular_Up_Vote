@@ -4,6 +4,28 @@
     <form>
         <div class="form-group">
             <label for="author">Author</label>
+            <input type="text" class="form-control" id="author" [(ngModel)] = "newQuote.author" required>
+            <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
+                <p>Author is required</p>
+            </div>
         </div>
+
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id = "name" [(ngModel)] = "newQuote.name" required>
+            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+                <p>The person's who submitted is required</p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="detail">Detail</label>
+            <textarea class="form-control" id="detail" rows="5" [([(ngModel)]="newQuote.detail")] name="detail" #detail = "[(ngModel)]" required></textarea>
+            <div [hidden]="detail.valid || detail.pristine" class="alert alert-danger">
+                <p>The quote is required</p>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-success">Add Quote</button>
     </form>
 </div>

@@ -12,9 +12,20 @@ export class QuoteFormComponent implements OnInit {
 
   @Output() addQuote = new EventEmitter<Quote>();
 
-  submitQuote() {
+  submitQuote(formInfo: any) {
+    const tempItem: object = {
+      author: formInfo.author,
+      person: formInfo.person,
+      detail: formInfo.detail
+    }
     this.addQuote.emit(this.newQuote);
   }
+
+  name: any;
+  author: any;
+  detail: any;
+  NgModel: any;
+
   
   constructor() { }
 

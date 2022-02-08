@@ -4,7 +4,7 @@ import { Quote } from '../quote';
 @Component({
   selector: 'app-quote',
   templateUrl: './quote.component.html',
-  style: ['./quote.component.css']
+  styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
 
@@ -15,7 +15,7 @@ export class QuoteComponent implements OnInit {
     new Quote("Edison", "Samm", "I love myself", "Fourth Quote", new Date(2000, 9, 3)),
   ];
 
-  addNewQuote(quote) {
+  addNewQuote(quote: any) {
     let quoteLength = this.quote.length;
     quote.completeDate = new Date(quote.completeDate) 
     this.quote.push(quote)

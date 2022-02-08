@@ -1,22 +1,22 @@
 <div class="container-fluid">
-    <h2 class="text-center">These are my Quotes</h2>
-    <hr>
-    <ul>
-      <div class="row">
-        <div class="col-md-6">
-          <div *ngFor="let quote of quote; let i = index">
-            <div>
-              <h4>{{ quote.author }}, {{ quote.name }}, {{ quote.quote }}, elapsed since creation: {{ quote.countDown|date|lowercase }}</h4>     
-              <button (click)="toggleDetails(i)">Toggle Details</button>
-              <app-quote-detail *ngIf="quote.showDetail" [quote] = 'quote' (isComplete)="deleteQuote($event, i)" ></app-quote-detail>
-            </div>
-          </div>
+  <h2 class="text-center">These are my Quotes</h2>
+  <hr>
+  <ul>
+    <div class="row">
+      <div class="col-md-6">
+        <div *ngFor="let quote of quote; let i = index">
+  
+            <h4>{{ quote.author }}, {{ quote.name }}, {{ quote.quote }}, elapsed since creation:
+              {{ quote.countDown|date|lowercase }}</h4>
+            <button (click)="toggleDetails(i)">Toggle Details</button>
+            <app-quote-detail *ngIf="quote.showDetail" [quote]='quote' (isComplete)="deleteQuote($event, i)">
+            </app-quote-detail>
+          
         </div>
       </div>
-    </ul>
-    <div class="col-md-6">
-      <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
     </div>
+  </ul>
+  <div class="col-md-4 col-sm-2">
+    <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
   </div>
-
-  <app-quote-form></app-quote-form>
+</div>

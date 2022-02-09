@@ -1,22 +1,36 @@
 <div class="container-fluid">
   <h2 class="text-center">These are my Quotes</h2>
   <hr>
-  <ul>
-    <div class="row">
-      <div class="col-md-6">
-        <div *ngFor="let quote of quote; let i = index">
-  
-            <h4>{{ quote.author }}, {{ quote.name }}, {{ quote.quote }}, elapsed since creation:
-              {{ quote.countDown|date|lowercase }}</h4>
-            <button (click)="toggleDetails(i)">Toggle Details</button>
-            <app-quote-detail *ngIf="quote.showDetail" [quote]='quote' (isComplete)="deleteQuote($event, i)">
-            </app-quote-detail>
-          
+
+  <div class="row">
+    <div class="col-md-6">
+      <div *ngFor="let quote of quotes; let i = index">
+
+        <h4 id="{{ i }}" *ngIf="highestUpvote()===quote.upvotes && quote.upvotes>0">{{ quote.author }},
+          {{ quote.person }}, {{ quote.detail }}, elapsed since creation:
+          {{ quote.completeDate|date|lowercase }}</h4>
+        <p *ngIf="highestUpvote()!==quote.upvotes || quote.upvotes===0"> {{ quote.author }} due
+          {{ quote.completeDate|date|lowercase }} </p>
+        <button (click)="toggleDetails(i)">Toggle Details</button>
+        <div *ngIf="quote.showDetail">
+          <app-quote-detail *ngIf="quote.showDetail" [quote]='quote' (isDelete)='deleteQuote($event, i)'>
+          </app-quote-detail>
         </div>
+
+        <div class="quote_voting">
+          <div class="btn btn-success" (click)="upvote(i)">Upvote</div>
+          <div class="btn btn-info" (click)="downvote(i)">Downvote</div>
+          <div class="btn btn-danger" (click)="toDelete(i)">Delete</div>
+        </div>
+
       </div>
     </div>
-  </ul>
-  <div class="col-md-4 col-sm-2">
+    
+  </div>
+
+
+  <div class="col-md-6">
     <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
   </div>
+
 </div>

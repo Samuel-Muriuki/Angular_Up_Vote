@@ -10,14 +10,10 @@ import { Quote } from '../quote';
 export class QuoteDetailComponent implements OnInit {
 
   @Input() quote!: Quote;
-  @Output() isComplete = new EventEmitter<boolean>();
-
-  quoteComplete(complete: boolean) {
-    this.isComplete.emit(complete);
-  }
+  @Output() isDelete = new EventEmitter<boolean>();
 
   quoteDelete(complete: boolean) {
-    this.isComplete.emit(complete);
+    this.isDelete.emit(complete);
   }
 
   constructor() {};

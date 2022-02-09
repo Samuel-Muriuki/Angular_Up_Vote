@@ -1,8 +1,8 @@
-import { DateCountDownPipe } from './date-count-down.pipe';
+import { DateCountPipe } from './date-count-down.pipe';
 
-describe('DateCountDownPipe', () => {
+describe('DateCountPipe', () => {
   it('create an instance', () => {
-    const pipe = new DateCountDownPipe();
+    const pipe = new DateCountPipe();
     expect(pipe).toBeTruthy();
   });
 });

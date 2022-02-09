@@ -8,23 +8,19 @@ import { Quote } from '../quote';
 })
 export class QuoteFormComponent implements OnInit {
 
-  newQuote = new Quote("", "", "", "", new Date());
+  newQuote = new Quote( 0, "", "", "", "", new Date());
 
   @Output() addQuote = new EventEmitter<Quote>();
 
-  submitQuote(formInfo: any) {
-    const tempItem: object = {
-      author: formInfo.author,
-      person: formInfo.person,
-      detail: formInfo.detail
-    }
+  submitQuote() {
     this.addQuote.emit(this.newQuote);
   }
-
-  name: any;
-  author: any;
-  detail: any;
-  NgModel: any;
+ 
+  // id: number;
+  // person: any;
+  // author: any;
+  // detail: any;
+  // NgModel: any;
 
   
   constructor() { }

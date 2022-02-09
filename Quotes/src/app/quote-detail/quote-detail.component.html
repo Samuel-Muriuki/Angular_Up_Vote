@@ -1,3 +1,7 @@
 <p>{{ quote.detail }}</p>
-<p>Time elapsed since Quote was created {{ quote.countDown|dateCountDown }} </p>
-<button (click)="quoteDelete(true)" class="btn btn-outline-danger">Delete Quote</button>
+<!-- <p>Time elapsed since Quote was created {{ quote.completeDate|dateCount }} </p>
+<button (click)="quoteDelete(true)" class="btn btn-outline-danger">Delete Quote</button> -->
+
+<p>This Quote was said on {{ quote.completeDate | dateCount }} days</p>
+<p>Upvotes:{{ quote.upvotes }}</p>
+<p>Downvotes:{{ quote.downvotes }}</p>
